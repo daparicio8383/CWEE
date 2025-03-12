@@ -16,7 +16,7 @@ proxies = {
     "http": http_proxy
 }
 
-url = "http://94.237.57.237:43328/index.php"
+url = "http://94.237.55.96:45844/index.php"
 
 def explore_nodes(parent_path="", node_index=1):
     global number, number_char, number_child, document_structure
@@ -108,7 +108,7 @@ def explore_nodes(parent_path="", node_index=1):
 
         if "Message successfully sent" not in response.text:
             value_length += 1
-            if value_length > 50:
+            if value_length > 50: # Max. string-length = 50, change if necessary.
                 print(f"Breaking text-length check at {value_length} for {full_path} - No text found.")
                 return
         else:
