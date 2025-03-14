@@ -12,4 +12,4 @@ Module that covers XPath Injection, LDAP injection, and HTML injection in PDF ge
 
 ### Blind LDAP Injection
 
-[BlindLDAPInjection.py](https://github.com/daparicio8383/CWEE/blob/main/Injection%20attacks/BlindXLDAPInjection.py): script to determine the value of an attribute, ina LDAP search filter, in the context of a blind LDAP Injection.
+[BlindLDAPInjection.py](https://github.com/daparicio8383/CWEE/blob/main/Injection%20attacks/BlindLDAPInjection.py): script to determine the value of an attribute, ina LDAP search filter, in the context of a blind LDAP Injection.
